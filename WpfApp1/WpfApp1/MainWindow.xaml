@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="Formularz" Height="250" Width="500">
     <Grid>
+        <!--Definicje kolumn i rzędów-->
         <Grid.RowDefinitions >
             <RowDefinition Height="1*"></RowDefinition>
             <RowDefinition Height="1*"></RowDefinition>
@@ -18,16 +19,19 @@
             <ColumnDefinition Width="1*"></ColumnDefinition>
             <ColumnDefinition Width="1*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-
+        
+        <!--Wprowadzanie danych-->
         <TextBox Name="NameBox" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"></TextBox>
         <TextBox Name="SurnameBox" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"></TextBox>
         <DatePicker Name="Date" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"></DatePicker>
-
+        
+        <!--Pola informacyjne-->
         <TextBlock Grid.Row="0" Grid.Column="0" Text="Imię:"></TextBlock>
         <TextBlock Grid.Row="1" Grid.Column="0" Text="Nazwisko: "></TextBlock>
         <TextBlock Grid.Row="2" Grid.Column="0" Text="Data Urodzenia: "></TextBlock>
         
-        <Button Name="SaveButton" Grid.Row="3" Grid.Column="1" Content="Zapisz"></Button>
-        <Button Name="ClearButton" Grid.Row="3" Grid.Column="2" Content="Wyczyść"></Button>
+        <!--Przyciski akcji-->
+        <Button Name="SaveButton" Grid.Row="3" Grid.Column="1" Content="Zapisz" Click="SaveButton_Click"></Button>
+        <Button Name="ClearButton" Grid.Row="3" Grid.Column="2" Content="Wyczyść" Click="ClearButton_Click"></Button>
     </Grid>
 </Window>
