@@ -39,5 +39,37 @@ namespace ProjektAplikacjeDesktopIMobilne
             dep.Show();
             Close();
         }
+
+        private void DeleteDep_Click(object sender, RoutedEventArgs e)
+        {
+            var res = MessageBox.Show("Czy na pewno chcesz usunąc oddział?", "Usunąć?", MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.No);
+
+            if (res == MessageBoxResult.Yes)
+            {
+                var dep = new Department();
+                dep.Address = "";
+                dep.BossName = "";
+                dep.Name = "";
+                XMLActions.SaveDepartment(ConfigurationManager.AppSettings["department"], dep);
+                DataDepatment.Text = dep.ToString();
+            }
+        }
+
+        private void DeleteEmp_Click(object sender, RoutedEventArgs e)
+        {
+            var res = MessageBox.Show("Czy na pewno chcesz usunąc pracownika?", "Usunąć?", MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.No);
+
+            if (res == MessageBoxResult.Yes)
+            {
+                var emp = new Employee();
+                emp.FirstName = "";
+                emp.LastName = "";
+                emp.Job = "";
+                emp.Phone = "";
+
+                XMLActions.SaveEmployees(ConfigurationManager.AppSettings["employee"], emp);
+                DataEmployee.Text = emp.ToString();
+            }
+        }
     }
 }
