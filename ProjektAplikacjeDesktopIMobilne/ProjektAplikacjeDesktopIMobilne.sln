@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjektAplikacjeDesktopIMobilne", "ProjektAplikacjeDesktopIMobilne\ProjektAplikacjeDesktopIMobilne.csproj", "{1365F5FD-DC5F-4E8F-B27B-23B691198288}"
+	ProjectSection(ProjectDependencies) = postProject
+		{89CC73A3-045D-49F3-9451-93AC38CC4D33} = {89CC73A3-045D-49F3-9451-93AC38CC4D33}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteka", "Biblioteka\Biblioteka.csproj", "{89CC73A3-045D-49F3-9451-93AC38CC4D33}"
 EndProject

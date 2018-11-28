@@ -1,11 +1,11 @@
-﻿<Window x:Class="ProjektAplikacjeDesktopIMobilne.MainWindow"
+﻿<Window x:Class="ProjektAplikacjeDesktopIMobilne.Employee"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjektAplikacjeDesktopIMobilne"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Employee" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
@@ -23,7 +23,15 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Button Grid.Row="4" Grid.Column="4" x:Name="Test" Content="Test Odczyt" Click="Test_Click"></Button>
-        <Button Grid.Row="5" Grid.Column="4" x:Name="Test2" Content="Test Zapis" Click="Test2_Click"></Button>
+        <TextBlock Grid.Column="0" Grid.Row="1" Text="Imię:"></TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="2" Text="Nazwisko:"></TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="3" Text="Numer telefonu:"></TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="4" Text="Stanowisko:"></TextBlock>
+
+        <TextBox x:Name="FirstName" Grid.Column="1" Grid.Row="1"></TextBox>
+        <TextBox x:Name="LastName" Grid.Column="1" Grid.Row="2"></TextBox>
+        <TextBox x:Name="Phone" Grid.Column="1" Grid.Row="3"></TextBox>
+        <TextBox x:Name="Job" Grid.Column="1" Grid.Row="4"></TextBox>
+
     </Grid>
 </Window>

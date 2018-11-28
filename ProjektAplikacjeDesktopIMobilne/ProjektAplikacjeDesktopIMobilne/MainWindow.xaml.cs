@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ProjektAplikacjeDesktopIMobilne.XML;
 
 namespace ProjektAplikacjeDesktopIMobilne
 {
@@ -23,6 +24,22 @@ namespace ProjektAplikacjeDesktopIMobilne
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Test_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(XMLActions.ReadEmployees("employees.xml").ToString());
+        }
+
+        private void Test2_Click(object sender, RoutedEventArgs e)
+        {
+            var employee = new Biblioteka.Model.Employee();
+            employee.FirstName = "Adam";
+            employee.LastName = "Nowak";
+            employee.Phone = "123-123-123";
+            employee.Job = "Marketer";
+
+            XMLActions.SaveEmployees("employees.xml", employee);
         }
     }
 }
