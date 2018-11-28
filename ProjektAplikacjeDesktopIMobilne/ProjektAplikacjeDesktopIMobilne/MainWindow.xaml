@@ -5,7 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjektAplikacjeDesktopIMobilne"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Loaded="Load"
+        Title="Menu Główne" Height="450" Width="800">
+    <Window.Resources>
+            <ResourceDictionary>
+                <ResourceDictionary.MergedDictionaries>
+                    <ResourceDictionary Source="ResourceDictionary\TextBlockStyles.xaml"/>
+                    <ResourceDictionary Source="ResourceDictionary\ButtonStyles.xaml"/>
+                    <ResourceDictionary Source="ResourceDictionary\TextBoxStyles.xaml"/>
+                </ResourceDictionary.MergedDictionaries>
+            </ResourceDictionary>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
@@ -23,7 +33,13 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Button Grid.Row="4" Grid.Column="4" x:Name="Test" Content="Test Odczyt" Click="Test_Click"></Button>
-        <Button Grid.Row="5" Grid.Column="4" x:Name="Test2" Content="Test Zapis" Click="Test2_Click"></Button>
+        <TextBlock Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Text="Podgląd oddziałów" Style="{StaticResource Header}"></TextBlock>
+        <TextBlock x:Name="DataDepatment" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2"></TextBlock>
+
+        <TextBlock Grid.Column="3" Grid.Row="0" Grid.ColumnSpan="2" Text="Podgląd pracownika" Style="{StaticResource Header}"></TextBlock>
+        <TextBlock x:Name="DataEmployee" Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2"></TextBlock>
+        
+        <Button Grid.Row="5" Grid.Column="3" x:Name="AddDep" Content="Dodaj oddział" Click="AddDep_Click"></Button>
+        <Button Grid.Row="5" Grid.Column="4" x:Name="AddEmp" Content="Dodaj pracownika" Click="AddEmp_Click"></Button>
     </Grid>
 </Window>

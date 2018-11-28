@@ -1,18 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
 using ProjektAplikacjeDesktopIMobilne.XML;
+using Biblioteka.Model;
+using System.Configuration;
 
 namespace ProjektAplikacjeDesktopIMobilne
 {
@@ -26,17 +15,28 @@ namespace ProjektAplikacjeDesktopIMobilne
             InitializeComponent();
         }
 
-        private void Test_Click(object sender, RoutedEventArgs e)
+        private void AddEmp_Click(object sender, RoutedEventArgs e)
         {
-            var emp = new EmployeeShow();
+            var emp = new EmloyeeForm();
             emp.Show();
             Close();
         }
 
-        private void Test2_Click(object sender, RoutedEventArgs e)
+        private void Load(object sender, RoutedEventArgs e)
         {
-            var emp = new EmloyeeForm();
-            emp.Show();
+            var emp = new Employee();
+            emp = XMLActions.ReadEmployees(ConfigurationManager.AppSettings["employee"]);
+            DataEmployee.Text = emp.ToString();
+
+            var dep = new Department();
+            dep = XMLActions.ReadDepartment(ConfigurationManager.AppSettings["department"]);
+            DataDepatment.Text = dep.ToString();
+        }
+
+        private void AddDep_Click(object sender, RoutedEventArgs e)
+        {
+            var dep = new DepartmentForm();
+            dep.Show();
             Close();
         }
     }
