@@ -36,6 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -55,18 +56,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Departments.xaml.cs">
-      <DependentUpon>Departments.xaml</DependentUpon>
+    <Compile Include="EmployeeForm.xaml.cs">
+      <DependentUpon>EmployeeForm.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Employee.xaml.cs">
-      <DependentUpon>Employee.xaml</DependentUpon>
+    <Compile Include="EmployeeShow.xaml.cs">
+      <DependentUpon>EmployeeShow.xaml</DependentUpon>
     </Compile>
     <Compile Include="XML\XMLActions.cs" />
-    <Page Include="Departments.xaml">
+    <Page Include="EmployeeForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Employee.xaml">
+    <Page Include="EmployeeShow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

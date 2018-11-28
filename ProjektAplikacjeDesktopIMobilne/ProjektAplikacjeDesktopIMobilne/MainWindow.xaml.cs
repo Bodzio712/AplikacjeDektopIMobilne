@@ -28,18 +28,16 @@ namespace ProjektAplikacjeDesktopIMobilne
 
         private void Test_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(XMLActions.ReadEmployees("employees.xml").ToString());
+            var emp = new EmployeeShow();
+            emp.Show();
+            Close();
         }
 
         private void Test2_Click(object sender, RoutedEventArgs e)
         {
-            var employee = new Biblioteka.Model.Employee();
-            employee.FirstName = "Adam";
-            employee.LastName = "Nowak";
-            employee.Phone = "123-123-123";
-            employee.Job = "Marketer";
-
-            XMLActions.SaveEmployees("employees.xml", employee);
+            var emp = new EmloyeeForm();
+            emp.Show();
+            Close();
         }
     }
 }
